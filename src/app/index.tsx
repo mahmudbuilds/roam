@@ -2,15 +2,13 @@ import React, { useState } from "react";
 import {
   ScrollView,
   View,
-  Pressable,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { Feather, Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { Feather, Ionicons } from "@expo/vector-icons";
 import {
   colors,
   spacing,
   radius,
-  type,
   fontFamilies,
 } from "@/theme";
 import {

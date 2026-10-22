@@ -1,6 +1,6 @@
 import React from "react";
 import { Pressable, View, StyleProp, ViewStyle } from "react-native";
-import { colors, radius, spacing } from "@/theme";
+import { colors, radius } from "@/theme";
 import { ThemedText } from "./themed-text";
 
 export interface FilterChipProps {

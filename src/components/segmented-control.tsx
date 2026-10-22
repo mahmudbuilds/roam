@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Pressable, StyleProp, ViewStyle } from "react-native";
-import { colors, radius, spacing, fontFamilies } from "@/theme";
+import { colors, radius, fontFamilies } from "@/theme";
 import { ThemedText } from "./themed-text";
 
 export interface SegmentOption {

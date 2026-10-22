@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Pressable, StyleProp, ViewStyle } from "react-native";
 import { Feather, Ionicons } from "@expo/vector-icons";
-import { colors, radius, spacing, fontFamilies } from "@/theme";
+import { radius, spacing, fontFamilies } from "@/theme";
 import { ThemedText } from "./themed-text";
 
 export type AlertType = "success" | "error";

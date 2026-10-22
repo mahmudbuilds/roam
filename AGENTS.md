@@ -27,6 +27,7 @@ bunx eas-cli@latest <cmd>    # EAS builds, submits, and updates (use instead of 
 
 Each tool has one job. Ask before moving a responsibility to a different tool.
 
+- **Design System & Styling:** Tokens live in `src/theme/` (colors, spacing, typography, radius, shadows, motion) and are mirrored in `global.css` via Tailwind v4 `@theme`. Plus Jakarta Sans is the app font (`@expo-google-fonts/plus-jakarta-sans`). Shared primitives live in `src/components/`.
 - **Auth:** Clerk is the source of truth. The app keeps its own custom auth screens. Set Clerk up through the Clerk CLI and use the Clerk MCP for current Expo patterns.
 - **Content:** Sanity (properties, hosts, policies, house rules). Studio is a standalone app in `studio/`. Schema deploys and content changes go through the Sanity MCP, and generated property copy uses Agent Actions.
 - **Exact constraints** (price, guests, type, amenities, pets, place): GROQ filters, with values always passed as params.

@@ -7,7 +7,7 @@ import {
   View,
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { colors, spacing, radius, type } from "@/theme";
+import { colors, spacing, radius } from "@/theme";
 import { ThemedText } from "./themed-text";
 
 export type ButtonVariant = "primary" | "secondary" | "ghost" | "icon";

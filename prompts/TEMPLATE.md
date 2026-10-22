@@ -20,3 +20,6 @@ The flows to run, the cases to try, and the checks to pass, ending with an end-t
 
 ## AGENTS.md updates
 Any decision later features must respect, and the section it belongs in. Note rules this replaces. Write "None" if nothing.
+
+## Result
+Filled in at close-out, left empty while drafting. What the agent built and what changed versus the plan: the outcome in a line or two, the key files, verification outcomes, and anything deferred or deviating from the plan.
