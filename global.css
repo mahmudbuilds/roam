@@ -1,0 +1,42 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
+@import "nativewind/theme";
+
+@theme {
+  --color-primary-yellow: #FFC629;
+  --color-lavender: #C9B4FF;
+  --color-text-primary: #0B0B1A;
+  --color-text-secondary: #6B7280;
+  --color-surface-white: #FFFFFF;
+  --color-surface-gray: #F4F5F7;
+  --color-border-gray: #E5E7EB;
+  --color-glass-blur: rgba(255, 255, 255, 0.7);
+
+  --color-success: #10B981;
+  --color-success-bg: #E8F5E9;
+  --color-error: #EF4444;
+  --color-error-bg: #FEE2E2;
+
+  --color-badge-yellow: #FEF3C7;
+  --color-badge-yellow-text: #92400E;
+  --color-badge-mint: #E6F4EA;
+  --color-badge-mint-text: #137333;
+  --color-badge-pink: #FCE8E6;
+  --color-badge-pink-text: #C5221F;
+  --color-badge-blue: #E8F0FE;
+  --color-badge-blue-text: #1A73E8;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --font-display: PlusJakartaSans_700Bold;
+  --font-heading: PlusJakartaSans_700Bold;
+  --font-body: PlusJakartaSans_400Regular;
+  --font-medium: PlusJakartaSans_500Medium;
+  --font-semibold: PlusJakartaSans_600SemiBold;
+}
