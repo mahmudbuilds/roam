@@ -12,3 +12,5 @@ export * from "./stepper";
 export * from "./alert-banner";
 export * from "./listing-card";
 export * from "./glass-tab-bar";
+export * from "./google-logo";
+

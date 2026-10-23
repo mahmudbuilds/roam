@@ -11,6 +11,9 @@ export const colors = {
   surfaceGray: "#F4F5F7",
   borderGray: "#E5E7EB",
   glassBlur: "rgba(255, 255, 255, 0.7)",
+  skipPillBg: "rgba(255, 255, 255, 0.85)",
+  locationPillBg: "rgba(11, 11, 26, 0.62)",
+  locationPillBorder: "rgba(255, 255, 255, 0.35)",
 
   // Status & Alerts
   success: "#10B981",

@@ -21,6 +21,7 @@ export interface ButtonProps {
   disabled?: boolean;
   loading?: boolean;
   showArrow?: boolean;
+  arrowPosition?: "inline" | "right";
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   children?: React.ReactNode;
@@ -88,9 +89,9 @@ const sizeStyles: Record<ButtonSize, ViewStyle> = {
     minHeight: 52,
   },
   lg: {
-    paddingVertical: 18,
-    paddingHorizontal: 32,
-    minHeight: 60,
+    paddingVertical: 15,
+    paddingHorizontal: 24,
+    minHeight: 54,
   },
 };
 
@@ -108,6 +109,7 @@ export function Button({
   disabled,
   loading,
   showArrow = false,
+  arrowPosition = "inline",
   leftIcon,
   rightIcon,
   children,
@@ -130,6 +132,7 @@ export function Button({
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
+          position: "relative",
           opacity: disabled ? 0.45 : pressed ? 0.8 : 1,
           transform: [{ scale: pressed ? 0.98 : 1 }],
         },
@@ -143,30 +146,48 @@ export function Button({
       ) : isIconButton ? (
         children
       ) : (
-        <View style={{ flexDirection: "row", alignItems: "center", gap: spacing.sm }}>
-          {leftIcon}
-          {title && (
-            <ThemedText
-              variant="button"
+        <>
+          <View style={{ flexDirection: "row", alignItems: "center", gap: spacing.mdSm }}>
+            {leftIcon}
+            {title && (
+              <ThemedText
+                variant="button"
+                style={{
+                  color: currentVariant.textColor,
+                  textAlign: "center",
+                }}
+              >
+                {title}
+              </ThemedText>
+            )}
+            {children}
+            {showArrow && arrowPosition === "inline" && (
+              <Feather
+                name="arrow-right"
+                size={20}
+                color={currentVariant.textColor}
+                style={{ marginLeft: 4 }}
+              />
+            )}
+            {rightIcon}
+          </View>
+          {showArrow && arrowPosition === "right" && (
+            <View
               style={{
-                color: currentVariant.textColor,
-                textAlign: "center",
+                position: "absolute",
+                right: spacing.lg,
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
-              {title}
-            </ThemedText>
+              <Feather
+                name="arrow-right"
+                size={20}
+                color={currentVariant.textColor}
+              />
+            </View>
           )}
-          {children}
-          {showArrow && (
-            <Feather
-              name="arrow-right"
-              size={20}
-              color={currentVariant.textColor}
-              style={{ marginLeft: 4 }}
-            />
-          )}
-          {rightIcon}
-        </View>
+        </>
       )}
     </Pressable>
   );

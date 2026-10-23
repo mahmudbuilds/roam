@@ -16,6 +16,20 @@ export const type = {
     lineHeight: 56,
     color: colors.textPrimary,
   },
+  brandWordmark: {
+    fontFamily: fontFamilies.extraBold,
+    fontSize: 38,
+    lineHeight: 42,
+    letterSpacing: -1.5,
+    color: colors.textPrimary,
+  },
+  heroHeading: {
+    fontFamily: fontFamilies.extraBold,
+    fontSize: 33,
+    lineHeight: 39,
+    letterSpacing: -0.8,
+    color: colors.textPrimary,
+  },
   heading: {
     fontFamily: fontFamilies.bold,
     fontSize: 28,
@@ -41,7 +55,7 @@ export const type = {
     color: colors.textSecondary,
   },
   button: {
-    fontFamily: fontFamilies.medium,
+    fontFamily: fontFamilies.semiBold,
     fontSize: 17,
     lineHeight: 22,
     color: colors.textPrimary,

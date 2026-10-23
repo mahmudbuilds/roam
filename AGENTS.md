@@ -19,7 +19,7 @@ bunx eas-cli@latest <cmd>    # EAS builds, submits, and updates (use instead of 
 ## Expo
 
 - Expo ships breaking changes every SDK release, so don't trust memory. Before touching an Expo, EAS, or React Native API, check the `expo` major version in `package.json` and read `https://docs.expo.dev/versions/v<major>.0.0/`. For anything else, start from https://docs.expo.dev/llms.txt and follow its links.
-- Routes live in `src/app/`: every file is a screen and `_layout.tsx` files define navigators. API routes are `src/app/api/*+api.ts`. Keep components, hooks, and utils outside `src/app/`.
+- Routes live in `src/app/`: every file is a screen and `_layout.tsx` files define navigators. `/` redirects to `/onboarding`, `/(auth)/sign-in` is the auth entry screen, and `/design-system` hosts the component showcase. API routes are `src/app/api/*+api.ts`. Keep components, hooks, and utils outside `src/app/`.
 - `ios/` and `android/` are generated. Never create or edit them by hand; configure native behavior in `app.json` and config plugins.
 - Expo Go only includes its bundled native modules. After adding a library with native code, switch to a development build (`bunx expo run:ios`).
 
@@ -27,7 +27,7 @@ bunx eas-cli@latest <cmd>    # EAS builds, submits, and updates (use instead of 
 
 Each tool has one job. Ask before moving a responsibility to a different tool.
 
-- **Design System & Styling:** Tokens live in `src/theme/` (colors, spacing, typography, radius, shadows, motion) and are mirrored in `global.css` via Tailwind v4 `@theme`. Plus Jakarta Sans is the app font (`@expo-google-fonts/plus-jakarta-sans`). Shared primitives live in `src/components/`.
+- **Design System & Styling:** Tokens live in `src/theme/` (colors, spacing, typography, radius, shadows, motion) and are mirrored in `global.css` via Tailwind v4 `@theme`. Plus Jakarta Sans is the app font (`@expo-google-fonts/plus-jakarta-sans`). Shared primitives (including `react-native-svg` vector icons like `GoogleLogo`) live in `src/components/`.
 - **Auth:** Clerk is the source of truth. The app keeps its own custom auth screens. Set Clerk up through the Clerk CLI and use the Clerk MCP for current Expo patterns.
 - **Content:** Sanity (properties, hosts, policies, house rules). Studio is a standalone app in `studio/`. Schema deploys and content changes go through the Sanity MCP, and generated property copy uses Agent Actions.
 - **Exact constraints** (price, guests, type, amenities, pets, place): GROQ filters, with values always passed as params.
