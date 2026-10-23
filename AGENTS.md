@@ -19,7 +19,7 @@ bunx eas-cli@latest <cmd>    # EAS builds, submits, and updates (use instead of 
 ## Expo
 
 - Expo ships breaking changes every SDK release, so don't trust memory. Before touching an Expo, EAS, or React Native API, check the `expo` major version in `package.json` and read `https://docs.expo.dev/versions/v<major>.0.0/`. For anything else, start from https://docs.expo.dev/llms.txt and follow its links.
-- Routes live in `src/app/`: every file is a screen and `_layout.tsx` files define navigators. `/` redirects to `/onboarding`, `/(auth)/sign-in` is the auth entry screen, and `/design-system` hosts the component showcase. API routes are `src/app/api/*+api.ts`. Keep components, hooks, and utils outside `src/app/`.
+- Routes live in `src/app/`: every file is a screen and `_layout.tsx` files define navigators. `/` redirects to `/onboarding`, `/(auth)/sign-up`, `/(auth)/verify`, and `/(auth)/sign-in` form the authentication flow, `/home` hosts the authenticated home screen, and `/design-system` hosts the component showcase. API routes are `src/app/api/*+api.ts`. Keep components, hooks, and utils outside `src/app/`.
 - `ios/` and `android/` are generated. Never create or edit them by hand; configure native behavior in `app.json` and config plugins.
 - Expo Go only includes its bundled native modules. After adding a library with native code, switch to a development build (`bunx expo run:ios`).
 

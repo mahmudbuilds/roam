@@ -86,16 +86,16 @@ export default function OnboardingScreen() {
   const touchStartXRef = useRef<number | null>(null);
 
   const handleSkip = () => {
-    router.push("/(auth)/sign-in");
+    router.push("/(auth)/sign-up");
   };
 
   const handleGetStarted = () => {
-    router.push("/(auth)/sign-in");
+    router.push("/(auth)/sign-up");
   };
 
   const handleContinueWithGoogle = () => {
     router.push({
-      pathname: "/(auth)/sign-in",
+      pathname: "/(auth)/sign-up",
       params: { provider: "google" },
     });
   };
